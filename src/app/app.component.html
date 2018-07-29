@@ -1,20 +1,52 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<app-chart [type]="type" [color]="color" [data]="data"></app-chart>
+<div class="form-group">
+  <label for="Chart">Chart</label>
+  <select (change)="onChanegType(selectType)" #selectType class="form-control" name="Chart" id="Chart">
+    <option value="pie">Pie </option>
+    <option value="advancedPie">advanced Pie</option>
+    <option value="gridPie">grid Pie</option>
+    <option value="gauge">gauge</option>
+    <option value="horiBar">horizontal Bar</option>
+    <option value="vertBar">vertical Bar</option>
+    <option value="numberCard">number Card</option>
+    <option value="treeMap">tree Map</option>
+  </select>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div class="form-group">
+  <label for="Color">Color</label>
+  <select (change)="onChanegColor(selectedColor)" #selectedColor class="form-control" name="Color" id="Color">
+    <option value="vivid">vivid </option>
+    <option value="natural">natural</option>
+    <option value="cool">cool</option>
+    <option value="fire">fire</option>
+    <option value="solar">solar</option>
+    <option value="air">air</option>
+    <option value="aqua">aqua</option>
+    <option value="flame">flame</option>
+    <option value="ocean">ocean</option>
+    <option value="forest">forest</option>
+    <option value="horizon">horizon</option>
+    <option value="neons">neons</option>
+    <option value="picnic">picnic</option>
+    <option value="night">night</option>
+    <option value="nightLights">night Lights</option>
+  </select>
+</div>
+
+<div class="display">
+    <app-chart [type]="'pie'" [color]="color" [data]="data"></app-chart>
+    <app-chart [type]="'advancedPie'" [color]="color" [data]="data"></app-chart>
+</div>
+<div class="display">
+    <app-chart [type]="'gridPie'" [color]="color" [data]="data"></app-chart>
+    <app-chart [type]="'numberCard'" [color]="color" [data]="data"></app-chart>
+</div>
+<div class="display">
+    <app-chart [type]="'horiBar'" [color]="color" [data]="data"></app-chart>
+    <app-chart [type]="'vertBar'" [color]="color" [data]="data"></app-chart>
+</div>
+<div class="display">
+    <app-chart [type]="'gauge'" [color]="color" [data]="data"></app-chart>
+    <app-chart [type]="'treeMap'" [color]="color" [data]="data"></app-chart>
+</div>

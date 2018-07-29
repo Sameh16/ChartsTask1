@@ -1,0 +1,27 @@
+
+<div [ngSwitch]="type">
+    <div *ngSwitchCase="'pie'">
+        <app-pie-chart [domain]="color" [data]="data" ></app-pie-chart>
+    </div>
+    <div *ngSwitchCase="'advancedPie'">
+        <app-adv-pie [domain]="color" [data]="data" ></app-adv-pie>
+    </div>
+    <div *ngSwitchCase="'gridPie'">
+        <app-grid-pie [domain]="color" [data]="data" ></app-grid-pie>
+    </div>
+    <div *ngSwitchCase="'gauge'">
+        <app-gauge [domain]="color" [data]="data" ></app-gauge>
+    </div>
+    <div *ngSwitchCase="'horiBar'">
+        <app-hori-bar [domain]="color" [data]="data" ></app-hori-bar>
+    </div>
+    <div *ngSwitchCase="'vertBar'">
+        <app-ver-bar [domain]="color" [data]="data" ></app-ver-bar>
+    </div>
+    <div *ngSwitchCase="'numberCard'">
+        <app-number-card [domain]="color" [data]="data" ></app-number-card>
+    </div>
+    <div *ngSwitchCase="'treeMap'">
+        <app-tree-map [domain]="color" [data]="data" > </app-tree-map>
+    </div>
+</div>
