@@ -10,7 +10,7 @@ export class HoriBarComponent implements OnChanges {
   @Input('data') data: any[];
   @Input('domain') domain;
 
-  view: any[] = [700, 200];
+  view: any[] = [500, 200];
 
   // options
   showLegend = true;

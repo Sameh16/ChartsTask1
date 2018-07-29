@@ -8,7 +8,7 @@ import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/cor
 export class NumberCardComponent implements OnChanges {
   @Input('data') data: any[];
   @Input('domain') domain;
-  view: any[] = [700, 200];
+  view: any[] = [500, 200];
 
   // options
 

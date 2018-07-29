@@ -10,7 +10,7 @@ export class AdvPieComponent implements  OnChanges {
   @Input('data') data: any[];
   @Input('domain') domain;
 
-  view: any[] = [700, 400];
+  view: any[] = [500, 400];
 
   // options
   showLegend = true;
