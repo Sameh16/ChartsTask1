@@ -14,9 +14,25 @@ export class ChartComponent implements OnInit, OnChanges {
   @Input('data') data;
   @Input('color') color;
 
+  view: any[] = [500, 200];
+
+  // options
+  showLegend = true;
+  gradient = true;
+  showLabels = true;
+  explodeSlices = false;
+  doughnut = false;
+
+  colorScheme = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C']
+  };
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelect(event) {
+    console.log(event);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -27,8 +43,8 @@ export class ChartComponent implements OnInit, OnChanges {
           this.color = element.domain;
       }
     });
+    this.colorScheme = {domain: this.color};
 
-    console.log('my color =   ', this.color);
   }
 
 
