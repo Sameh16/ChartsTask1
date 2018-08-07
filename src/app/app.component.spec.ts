@@ -42,8 +42,8 @@ describe('AppComponent', () => {
 
   it('should change type', () => {
     const newType = {value:  'advPie'};
-    component.onChanegColor(newType);
+    component.onChanegType(newType);
 
-    expect(component.color).toBe(newType.value);
+    expect(component.type).toBe(newType.value);
   });
 });
