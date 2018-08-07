@@ -26,11 +26,11 @@ export class AppComponent {
   type = 'pie';
 
 
-  onChanegType(type: HTMLInputElement) {
+  onChanegType(type) {
     this.type = type.value;
   }
 
-  onChanegColor(color: HTMLInputElement) {
+  onChanegColor(color) {
     this.color = color.value;
     console.log(this.color);
   }
